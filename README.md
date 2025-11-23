@@ -51,8 +51,8 @@ cd RecetasApp
 ### 2. Configuración de la Base de Datos
 ```sql
 CREATE DATABASE recetas_db;
-CREATE USER 'recetas_user'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON recetas_db.* TO 'recetas_user'@'localhost';
+CREATE USER 'usr_recetas'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON recetas_db.* TO 'usr_recetas'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
