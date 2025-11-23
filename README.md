@@ -1,4 +1,4 @@
-# 🍳 Recetas App - Sistema Fullstack de Gestión Culinaria
+# 🍳 Recetas App - Sistema Fullstack
 
 Una aplicación web completa para gestionar y organizar recetas de cocina, desarrollada con arquitectura fullstack utilizando **Spring Boot** en el backend y **React** en el frontend.
 
@@ -18,7 +18,7 @@ Una aplicación web completa para gestionar y organizar recetas de cocina, desar
 ## 🛠 Stack Tecnológico
 
 ### Backend
-- **Java 17** - Lenguaje de programación
+- **Java** - Lenguaje de programación
 - **Spring Boot 3.2** - Framework principal
 - **Spring Data JPA** - Persistencia de datos
 - **MariaDB** - Base de datos relacional
