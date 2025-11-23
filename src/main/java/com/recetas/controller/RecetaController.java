@@ -66,6 +66,22 @@ public class RecetaController {
         }
     }
 
+    @DeleteMapping("/recetas/{id}")
+    public ResponseEntity<?> deleteReceta(@PathVariable("id") Integer id) {
+        System.out.println("DEBUG DELETE: Recibiendo id = " + id);
+
+        if (!recetaRepo.existsById(id)) {
+            System.out.println("DEBUG DELETE: No existe receta con id = " + id);
+            return ResponseEntity.notFound().build();
+        }
+
+        recetaRepo.deleteById(id);
+        System.out.println("DEBUG DELETE: Receta eliminada id = " + id);
+
+        return ResponseEntity.ok().build();
+    }
+
+
     @GetMapping("/dificultades")
     public List<Dificultad> getDificultades() {
         return dificultadRepo.findAll();
