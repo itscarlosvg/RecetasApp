@@ -1,3 +1,3 @@
-INSERT INTO dificultad (id, nombre) VALUES (1, 'Fácil');
-INSERT INTO dificultad (id, nombre) VALUES (2, 'Media');
-INSERT INTO dificultad (id, nombre) VALUES (3, 'Difícil');
+INSERT INTO dificultad (id, dificultad) VALUES (1, 'Fácil');
+INSERT INTO dificultad (id, dificultad) VALUES (2, 'Media');
+INSERT INTO dificultad (id, dificultad) VALUES (3, 'Difícil');
