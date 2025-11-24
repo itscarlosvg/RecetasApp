@@ -1,14 +1,14 @@
-# Usamos Tomcat como servidor
-FROM tomcat:9.0
+# Usamos JDK 17
+FROM eclipse-temurin:17-jdk-alpine
 
-# Eliminamos la aplicación default de Tomcat
-RUN rm -rf /usr/local/tomcat/webapps/*
+# Carpeta de trabajo
+WORKDIR /app
 
-# Copiamos tu WAR al directorio webapps como ROOT.war
-COPY deploy/recetas-backend-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+# Copiamos el WAR al contenedor
+COPY deploy/recetas-backend-1.0-SNAPSHOT.war app.war
 
-# Exponemos el puerto de Tomcat
+# Exponemos el puerto
 EXPOSE 8080
 
-# Comando para arrancar Tomcat
-CMD ["catalina.sh", "run"]
+# Ejecutamos el WAR con Spring Boot
+CMD ["java", "-jar", "app.war"]
